@@ -1,3 +1,0 @@
-projet_chapeau:
-    pattern:  /
-    defaults: { _controller: ProjetChapeauBundle:Chapeau:index }

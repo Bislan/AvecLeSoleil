@@ -1,3 +1,0 @@
-projet_video_homepage:
-    pattern:  /{site}/{siteid}/video
-    defaults: { _controller: ProjetVideoBundle:Default:index }

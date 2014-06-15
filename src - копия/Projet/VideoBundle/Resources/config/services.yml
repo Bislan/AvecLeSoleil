@@ -1,7 +1,0 @@
-parameters:
-#    projet_video.example.class: Projet\VideoBundle\Example
-
-services:
-#    projet_video.example:
-#        class: %projet_video.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
