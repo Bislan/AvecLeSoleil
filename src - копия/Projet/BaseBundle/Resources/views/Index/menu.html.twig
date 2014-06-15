@@ -1,0 +1,12 @@
+<ul>
+    {% for menu in menus %}
+
+
+
+        <li><a href="{{ path('projet_base_page',{'site' : menu.siteslug , 'page' : menu.id , 'action' : menu.rubriqueId}) }}">
+                {{ menu.titrefr }}
+            </a>
+        </li>
+
+    {% endfor %}
+</ul>

@@ -1,0 +1,18 @@
+{% extends '::base.html.twig' %}
+
+
+{% block content %}
+
+
+
+
+<h2>{{ produit.titrefr }}</h2>
+<p>Description : {{ produit.textefr }}</p>
+<p>Prix: {{ produit.prix }}€</p>
+
+    <a href="#" onClick="window.open('{{ path('projet_realisation_achterform',{'site':site, 'rubrique':rubrique ,'prodid':produit.id }) }}','_blank','width=400,height=600,left=300,top=300,scrollbars=0');return(false)">Acheter</a>
+
+
+    <p><a href="{{ path('projet_realisation_homepage',{'site':site,'rubrique':rubrique}) }}">Reture</a></p>
+
+{% endblock %}

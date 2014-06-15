@@ -1,0 +1,30 @@
+{% extends '::base.html.twig' %}
+
+
+{% block content %}
+
+
+
+
+    {% for pagin in pagination %}
+        <h2>{{ pagin.titrefr }}</h2>
+        <p>{{ pagin.textefr }}
+
+            {% if pagin.texteLongfr != NULL %}
+                <a href="{{ path('projet_base_page_detail',{'site':site,'page':pagin.id}) }}">..Plus</a>
+            {% endif %}
+        </p>
+    {% endfor %}
+
+
+
+
+
+
+
+    </table>
+    {# display navigation #}
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+    </div>
+{% endblock %}

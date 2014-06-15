@@ -1,0 +1,7 @@
+
+projet_video_court:
+    pattern:  /{_locale}/{site}/{siteid}/video
+    defaults: { _controller: ProjetVideoBundle:Default:index }
+projet_video_complet:
+    pattern:  /{_locale}/{site}/{artid}/video/video_detail
+    defaults: { _controller: ProjetVideoBundle:Default:videoComplet }

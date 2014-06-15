@@ -1,0 +1,7 @@
+parameters:
+#    projet_inscription.example.class: Projet\InscriptionBundle\Example
+
+services:
+#    projet_inscription.example:
+#        class: %projet_inscription.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

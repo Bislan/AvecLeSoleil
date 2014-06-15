@@ -1,0 +1,7 @@
+projet_base:
+    pattern:  /{site}
+    defaults: { _controller: ProjetBaseBundle:Default:menu }
+
+projet_base_page:
+    pattern:  /{site}/{page}/{action}
+    defaults: { _controller: ProjetBaseBundle:Default:page }

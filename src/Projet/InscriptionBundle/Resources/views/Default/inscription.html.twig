@@ -1,0 +1,12 @@
+
+
+
+{% block content %}
+<form action="{{ path('projet_inscription_ceinscrire',{'site':site, 'page':page ,'formationID':formationID }) }}" method="post">
+
+    {{ form_widget(form) }}
+   <p><input type="submit"  value="INSCRIPTION"></p>
+
+</form>
+
+{% endblock %}

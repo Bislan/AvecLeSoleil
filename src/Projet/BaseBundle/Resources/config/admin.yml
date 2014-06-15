@@ -1,0 +1,11 @@
+services:
+    sonata.admin.rubriques:
+        class: Projet\BaseBundle\Admin\RubriqueAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Menu", label: "Rubriques" }
+        arguments:
+            - ~
+            - Projet\BaseBundle\Entity\Rubriques
+            - ~
+        calls:
+            - [ setTranslationDomain, [ProjetBaseBundle]]

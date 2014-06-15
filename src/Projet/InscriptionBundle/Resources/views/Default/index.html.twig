@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %}
+
+
+{% block content %}
+
+
+
+    {% for formation in formations %}
+        <h2>{{ formation.nomfr }}</h2>
+        <h5>A partir du {{ formation.date|date('d-m-y') }}</h5>
+        <p>{{ formation.descriptionfr }}</p>
+        Contacte Mr {{ formation.nomeformateur }}  au {{ formation.telephone }}
+<p>Prix :{{ formation.prix }} Euro HTVA
+        <a href="#" onClick="window.open('{{ path('projet_inscription_ceinscrire',{'site':site, 'page':page ,'formationID':formation.id }) }}','_blank','width=400,height=600,left=300,top=300,scrollbars=0');return(false)">INSCIPTION</a>
+</p>
+    {% endfor %}
+{% endblock %}

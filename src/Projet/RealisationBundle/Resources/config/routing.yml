@@ -1,0 +1,12 @@
+projet_realisation_paypal:
+    pattern:  /PayPal
+    defaults: { _controller: ProjetRealisationBundle:Default:paystat }
+projet_realisation_homepage:
+    pattern:  /{_locale}/{site}/{rubrique}/Realisation
+    defaults: { _controller: ProjetRealisationBundle:Default:index }
+projet_realisation_detail:
+    pattern:  /{_locale}/{site}/{rubrique}/{prodid}/detail
+    defaults: { _controller: ProjetRealisationBundle:Default:detail }
+projet_realisation_achterform:
+    pattern:  /{_locale}/{site}/{rubrique}/{prodid}/form
+    defaults: { _controller: ProjetRealisationBundle:Default:achterForm }

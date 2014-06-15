@@ -1,0 +1,11 @@
+{% extends '::base.html.twig' %}
+{%  block content %}
+{% for article in articles %}
+<p>{{ article.titreVideoFr }}</p>
+{{ article.videoLien | raw }}
+<p>
+    {{ article.textVideoCourtFr }}<a href="{{ path('projet_video_complet',{'site':site, 'artid':article.id }) }}">...Plus</a>
+</p>
+
+{% endfor %}
+{% endblock %}

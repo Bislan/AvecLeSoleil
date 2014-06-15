@@ -1,0 +1,15 @@
+
+projet_base:
+    pattern:  /{site}
+    defaults: { _controller: ProjetBaseBundle:Default:menu }
+    requirements:
+                _locale: fr|en
+projet_base_page_detail:
+    pattern:  /{_locale}/{site}/{page}/details
+    defaults: { _controller: ProjetBaseBundle:Default:pageDatail }
+
+projet_base_page:
+    pattern:  /{_locale}/{site}/{page}/{action}
+    defaults: { _controller: ProjetBaseBundle:Default:page }
+
+

@@ -1,0 +1,33 @@
+
+
+
+<form action="">
+    <label>Language</label>
+    <select name="language">
+
+        <option value="fr" {% if app.request.get('_locale') == 'fr' %}selected="selected"{% endif %}>Français</option>
+        <option value="en" {% if app.request.get('_locale') == 'en' %}selected="selected"{% endif %}>English</option>
+
+    </select>
+    <input type="submit" value="Ok">
+</form>
+
+
+
+
+Test traduction : {{ "user.one" | trans }}
+
+
+
+<ul>
+    {% for menu in menus %}
+
+
+
+        <li><a href="{{ path('projet_base_page',{'site' : menu.siteslug , 'page' : menu.id , 'action' : menu.rubriqueId}) }}">
+                {{ menu.titrefr }}
+            </a>
+        </li>
+
+    {% endfor %}
+</ul>

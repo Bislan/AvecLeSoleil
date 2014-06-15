@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Articles" table="articles">
+    <indexes>
+      <index name="fk_Articles_Rubriques1_idx" columns="rubriques_id"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="titreFr" type="string" column="titre_fr" length="150" nullable="false"/>
+    <field name="titreEn" type="string" column="titre_en" length="45" nullable="false"/>
+    <field name="texteFr" type="text" column="texte_fr" nullable="false"/>
+    <field name="texteEn" type="string" column="texte_en" length="45" nullable="false"/>
+    <field name="photo" type="string" column="photo" length="70" nullable="true"/>
+    <field name="prix" type="string" column="prix" length="45" nullable="true"/>
+    <field name="statusVend" type="integer" column="status_vend" nullable="true"/>
+    <many-to-one field="rubriques" target-entity="Rubriques">
+      <join-columns>
+        <join-column name="rubriques_id" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

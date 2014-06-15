@@ -1,0 +1,9 @@
+projet_inscription_paystat:
+    pattern:  /paystat
+    defaults: { _controller: ProjetInscriptionBundle:Default:paystat }
+projet_inscription_index:
+    pattern:  /{_locale}/{site}/{page}/agenda
+    defaults: { _controller: ProjetInscriptionBundle:Default:index }
+projet_inscription_ceinscrire:
+    pattern:  /{_locale}/{site}/{page}/{formationID}/inscription
+    defaults: { _controller: ProjetInscriptionBundle:Default:inscription }

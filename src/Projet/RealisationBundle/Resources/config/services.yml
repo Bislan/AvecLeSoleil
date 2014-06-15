@@ -1,0 +1,7 @@
+parameters:
+#    projet_realisation.example.class: Projet\RealisationBundle\Example
+
+services:
+#    projet_realisation.example:
+#        class: %projet_realisation.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
